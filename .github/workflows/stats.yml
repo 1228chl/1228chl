@@ -7,44 +7,100 @@ on:
   push: {branches: ["master", "main"]}    # 推送时也更新（可选）
 
 jobs:
-  # 1. 生成 GitHub 统计卡片（Metrics）
+  # ========== 1. 生成多个独立的统计卡片 ==========
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      # 1.1 基础信息卡片（header, activity, community, repositories, metadata）
+      - name: Generate base metrics
+        uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}   # 使用你已有的带 repo 权限的 PAT
+          token: ${{ secrets.METRICS_TOKEN }}
           user: 1228chl
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
           config_base64: yes
           committer_branch: main
-          committer_message: "Auto update stats [skip ci]"
+          committer_message: "Update base metrics [skip ci]"
+          filename: base-metrics.svg
+          # 禁用其他插件，只输出 base 内容
+          plugin_languages: no
+          plugin_leetcode: no
+          plugin_lines: no
 
-          # 插件配置
-          plugin_habits: no                     # 已关闭 habits 避免错误
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-
+      # 1.2 编程语言统计卡片
+      - name: Generate languages card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: 1228chl
+          template: classic
+          base: ""                      # 不显示基础头部，只显示语言插件
+          config_timezone: Asia/Shanghai
+          config_base64: yes
+          committer_branch: main
+          committer_message: "Update languages card [skip ci]"
+          filename: languages.svg
           plugin_languages: yes
           plugin_languages_limit: 8
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
+          plugin_languages_colors: github
+          plugin_languages_categories: markup, programming
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_analysis_timeout_repositories: 7.5
+          # 确保其他插件关闭
+          plugin_leetcode: no
+          plugin_lines: no
 
+      # 1.3 LeetCode 统计卡片
+      - name: Generate LeetCode card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: 1228chl
+          template: classic
+          base: ""                      # 独立卡片，不重复头部
+          config_timezone: Asia/Shanghai
+          config_base64: yes
+          committer_branch: main
+          committer_message: "Update LeetCode card [skip ci]"
+          filename: leetcode.svg
           plugin_leetcode: yes
           plugin_leetcode_user: 1228chl
           plugin_leetcode_sections: solved
+          plugin_leetcode_limit_skills: 10
+          plugin_leetcode_limit_recent: 2
+          plugin_languages: no
+          plugin_lines: no
 
+      # 1.4 代码行数统计卡片
+      - name: Generate lines of code card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: 1228chl
+          template: classic
+          base: ""
+          config_timezone: Asia/Shanghai
+          config_base64: yes
+          committer_branch: main
+          committer_message: "Update lines card [skip ci]"
+          filename: lines.svg
           plugin_lines: yes
           plugin_lines_sections: base
+          plugin_lines_repositories_limit: 4
+          plugin_lines_history_limit: 1
+          plugin_languages: no
+          plugin_leetcode: no
 
-  # 2. 生成贪吃蛇动画（Snake）
+  # ========== 2. 生成贪吃蛇动画（与原配置一致） ==========
   generate-snake:
     runs-on: ubuntu-latest
-    needs: github-metrics          # 等待 metrics 生成完成后再运行，避免冲突
+    needs: github-metrics          # 等待 metrics 卡片生成完成后再运行，避免冲突
     permissions:
       contents: write
     steps:
