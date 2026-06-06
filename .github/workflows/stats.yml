@@ -2,8 +2,11 @@ name: Generate GitHub Stats SVG
 
 on:
   schedule:
-    - cron: '0 0 * * *'   # 每天 UTC 0 点自动更新
-  workflow_dispatch:       # 允许手动触发
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -11,22 +14,28 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # 拉取完整历史，避免 rebase 问题
 
       - name: Generate metrics SVG
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: metrics.svg
-          base: header, activity, community
+          base: header, activity
           config_timezone: Asia/Shanghai
-          # 可选：添加更多显示内容，比如最近音乐、编程语言等
-          # plugin_languages: yes
-          # plugin_languages_ignored: html, css
 
       - name: Commit and push if changed
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto update stats [skip ci]"
-          git push
+          # 先拉取远程最新代码，避免 push 冲突
+          git pull --rebase origin main
+          # 检查 metrics.svg 是否有变化
+          if git diff --quiet metrics.svg && git diff --staged --quiet metrics.svg; then
+            echo "No changes to commit"
+          else
+            git add metrics.svg
+            git commit -m "Auto update stats [skip ci]"
+            git push origin main
+          fi
