@@ -21,6 +21,7 @@ jobs:
           config_timezone: Asia/Shanghai
           committer_branch: main
           commit_message: "Auto update stats [skip ci]"
+          base64_images: yes
 
           # ========== 添加的插件 ==========
           # 1. 编程语言占比
