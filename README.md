@@ -10,14 +10,7 @@
 </div>
 
 <br />
-
-![](https://github-readme-activity-graph.vercel.app/graph?username=1228chl&theme=xcode)
-
-[![GitHub Streak](https://streak-stats.demolab.com/?user=1228chl&theme=solarized-dark&hide_border=true&border_radius=0&locale=en&fire=DD2727&ring=DD2BB9&date_format=[Y.]m.j)](https://git.io/streak-stats)
-
-[![Github Stats](https://github-readme-stats.vercel.app/api?username=1228chl&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&locale=en&title_color=00E3FF&icon_color=e91e63&text_color=ff5722&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79)](https://github-readme-stats.vercel.app/api?username=1228chl&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&locale=en&title_color=00E3FF&icon_color=e91e63&text_color=ff5722&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79)
-<br />
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=1228chl&layout=compact&hide=php&show_icons=true&count_private=true&hide_border=true&locale=en&title_color=a00c39&icon_color=e91e63&text_color=ff5722&bg_color=0,73FA79,73FDFF,D783FF&card_width=445)](https://github-readme-stats.vercel.app/api/top-langs/?username=1228chl&layout=compact&hide=php&show_icons=true&count_private=true&hide_border=true&locale=en&title_color=a00c39&icon_color=e91e63&text_color=ff5722&bg_color=0,73FA79,73FDFF,D783FF&card_width=445)
+![GitHub 统计卡片](https://raw.githubusercontent.com/1228chl/1228chl/main/metrics.svg)
 
 ## 📌 Pinned Projects
 
