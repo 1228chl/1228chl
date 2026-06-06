@@ -68,3 +68,66 @@ Currently diving deep into **large AI models** and passionate about turning know
 
 ---
 ✨ *Thanks for stopping by! Feel free to explore my repositories and reach out if you'd like to collaborate.*
+
+
+svg<svg width="520" viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- 数字标签 -->
+  <text x="24"  y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">2</text>
+  <text x="74"  y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">1</text>
+  <text x="124" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">2</text>
+  <text x="174" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">4</text>
+  <text x="224" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">1</text>
+  <text x="274" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">5</text>
+  <text x="324" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">9</text>
+  <text x="374" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">8</text>
+  <text x="424" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">9</text>
+  <text x="474" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">4</text>
+
+  <!-- ROW 0 (bit=8): 0 0 0 0 0 0 1 1 1 0 -->
+  <rect x="4"   y="28" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="54"  y="28" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="104" y="28" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="154" y="28" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="204" y="28" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="254" y="28" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="304" y="28" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="354" y="28" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="404" y="28" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="454" y="28" width="40" height="22" rx="4" fill="#ebedf0"/>
+
+  <!-- ROW 1 (bit=4): 0 0 0 1 0 1 0 0 0 1 -->
+  <rect x="4"   y="58" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="54"  y="58" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="104" y="58" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="154" y="58" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="204" y="58" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="254" y="58" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="304" y="58" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="354" y="58" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="404" y="58" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="454" y="58" width="40" height="22" rx="4" fill="#2ea043"/>
+
+  <!-- ROW 2 (bit=2): 1 0 1 0 0 0 0 0 0 0 -->
+  <rect x="4"   y="88" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="54"  y="88" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="104" y="88" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="154" y="88" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="204" y="88" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="254" y="88" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="304" y="88" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="354" y="88" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="404" y="88" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="454" y="88" width="40" height="22" rx="4" fill="#ebedf0"/>
+
+  <!-- ROW 3 (bit=1): 0 1 0 0 1 1 1 0 1 0 -->
+  <rect x="4"   y="118" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="54"  y="118" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="104" y="118" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="154" y="118" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="204" y="118" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="254" y="118" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="304" y="118" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="354" y="118" width="40" height="22" rx="4" fill="#ebedf0"/>
+  <rect x="404" y="118" width="40" height="22" rx="4" fill="#2ea043"/>
+  <rect x="454" y="118" width="40" height="22" rx="4" fill="#ebedf0"/>
+</svg>
