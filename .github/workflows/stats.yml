@@ -17,9 +17,9 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
-          base64_images: yes               # 关键：解决头像不显示
+          config_base64: yes               # 关键：解决头像不显示
           committer_branch: main
-          commit_message: "Auto update stats [skip ci]"
+          committer_message: "Auto update stats [skip ci]"
 
           # 插件配置
           plugin_habits: yes
