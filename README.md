@@ -15,5 +15,8 @@
     <img alt="GitHub 贪吃蛇动画" src="https://raw.githubusercontent.com/1228chl/1228chl/main/.github/assets/snake.svg">
   </picture>
 </div>
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=1228chl&style=for-the-badge&label=Visitors" align="center" />
+</div>
 
 ---
