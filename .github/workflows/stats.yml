@@ -114,6 +114,7 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: 1228chl
+          snake_speed: 0.5
           outputs: |
             .github/assets/snake.svg
             .github/assets/snake-dark.svg?palette=github-dark
